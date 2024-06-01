@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #27323E;
+    color: white;
+    font-family: "Poppins", sans-serif;
+} 
+
+.introduction {
+    padding: 200px 0 50px 0;
+    width: 70vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+#bubble {
+    border-radius: 30px 20px 20px 0;
+    font-size: 30px;
+    padding: 10px 20px;
+    background: linear-gradient(#F98B29,#F9952B);
+}
+
+#name {
+    display: block;
+    font-size: 42px;
+    font-weight: 700;
+    padding: 20px 0 0 0;
+}
+#heading {
+    font-size: 30px;
+}
+.img img  {
+    height: 290px;
+}
+.logo {
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+}
+.icons img {
+    width: 50px;
+}
+.bb {
+    border-bottom: 4px solid #F98B29;
+}
+ #width {
+    padding-top: 90px;
+    width: 75vw;
+    margin: auto;
+ }
+
+.myImage {
+    padding-top: 80px;
+}
+
+ #me {
+    border-radius: 50%;
+    border: 3px double #F98B29;
+ }
+ .about {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    padding-right: 180px;
+ }.about p {
+    padding: 5px;
+    font-size: 22px;
+ }
+ 
+ .h1 {
+    display: flex;
+    justify-content: center;
+ }
+ .lang {
+    border-radius: 40px;
+    width: 50vw;
+    height: 40px;
+    border: 2px solid #f9922a;
+    margin: 10px;
+ }
+ .skills {
+    padding-bottom: 60px;
+ }
+ .skills span {
+    display: block;
+    padding: 5px 0;
+ }
+
+.Languages {
+    transition: width 1s ease-in-out;
+    padding-left: 20px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #F98B29;
+}
+
+ #python{
+     width: 60%;
+ }
+ #html{
+    width: 80%;
+ }
+ #css{
+    width: 75%;
+ }
+ #js{
+    width: 55%;
+ }
+ #c {
+    width: 45%;
+ }
