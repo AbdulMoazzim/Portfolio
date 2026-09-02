@@ -16,7 +16,7 @@ export default function Hero() {
         </h1>
 
         <p className="max-w-2xl text-body-lg text-onsurface-variant">
-          I&apos;m Abdul, a Computer Systems Engineering student at NED
+          I&apos;m Abdul Moazzim, a Computer Systems Engineering student at NED
           University and a MERN stack developer. I build platforms across
           fintech, renewable energy, and education, while preparing for
           graduate research in machine learning.
