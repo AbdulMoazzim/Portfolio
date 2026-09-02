@@ -1,3 +1,4 @@
+
 "use client";
 
 import { FormEvent, useState } from "react";
@@ -10,28 +11,37 @@ export default function Contact() {
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+
     setStatus("sending");
     setErrorMessage("");
 
     const form = event.currentTarget;
+
     const data = {
+      access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
       name: (form.elements.namedItem("name") as HTMLInputElement).value,
       email: (form.elements.namedItem("email") as HTMLInputElement).value,
       message: (form.elements.namedItem("message") as HTMLTextAreaElement)
         .value,
+      subject: "New Contact Form Submission",
     };
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify(data),
       });
 
       const result = await res.json();
 
-      if (!res.ok) {
-        throw new Error(result.error || "Something went wrong.");
+      if (!res.ok || !result.success) {
+        throw new Error(
+          result.message || "Something went wrong. Please try again."
+        );
       }
 
       setStatus("sent");
@@ -54,13 +64,17 @@ export default function Contact() {
           <h2 className="text-headline-sm text-onsurface md:text-headline-md">
             Let&apos;s talk
           </h2>
+
           <p className="mt-3 text-body-lg text-onsurface-variant">
-            Open to internships, freelance work, and research
-            collaborations. If you have a project or question in mind,
-            send it over — I reply to every message.
+            Open to internships, freelance work, and research collaborations.
+            If you have a project or question in mind, send it over — I reply
+            to every message.
           </p>
 
-          <form onSubmit={handleSubmit} className="mt-10 flex flex-col gap-6">
+          <form
+            onSubmit={handleSubmit}
+            className="mt-10 flex flex-col gap-6"
+          >
             <div className="grid gap-6 md:grid-cols-2">
               <div className="flex flex-col gap-2">
                 <label
@@ -69,6 +83,7 @@ export default function Contact() {
                 >
                   Name
                 </label>
+
                 <input
                   id="name"
                   name="name"
@@ -86,6 +101,7 @@ export default function Contact() {
                 >
                   Email
                 </label>
+
                 <input
                   id="email"
                   name="email"
@@ -104,6 +120,7 @@ export default function Contact() {
               >
                 Message
               </label>
+
               <textarea
                 id="message"
                 name="message"
@@ -127,9 +144,10 @@ export default function Contact() {
                   Sent — thanks, I&apos;ll get back to you soon.
                 </p>
               )}
+
               {status === "error" && (
                 <p role="alert" className="text-body-md text-error">
-                  {errorMessage || "Couldn't send that. Try again shortly."}
+                  {errorMessage || "Couldn&apos;t send that. Try again shortly."}
                 </p>
               )}
             </div>
