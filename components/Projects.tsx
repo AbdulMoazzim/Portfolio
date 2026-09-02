@@ -12,14 +12,6 @@ type Project = {
 // TODO(Abdul): swap in your real demo/repo URLs once each project has one.
 const PROJECTS: Project[] = [
   {
-    name: "KSE Sentinel",
-    tagline: "Institutional trading dashboard for the PSX",
-    description:
-      "A dashboard built for institutional traders on the Pakistan Stock Exchange, with dark/light theming, 35 API route handlers, centralized auth via httpOnly cookies, and dedicated Analytics, Fundamentals, Position Sizing, and Ops screens.",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "FastAPI"],
-    featured: true,
-  },
-  {
     name: "EmpowerGEN Pakistan",
     tagline: "Bilingual solar energy & community platform",
     description:
