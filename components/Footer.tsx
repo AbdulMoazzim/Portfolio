@@ -1,7 +1,7 @@
 const LINKS = [
-  { label: "GitHub", href: "#" },
-  { label: "LinkedIn", href: "#" },
-  { label: "Email", href: "mailto:you@example.com" },
+  { label: "GitHub", href: "https://github.com/AbdulMoazzim" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/abdulmoazzim" },
+  { label: "Email", href: "mailto:abdulmoazzam0815@gmail.com" },
 ];
 
 export default function Footer() {
@@ -16,6 +16,7 @@ export default function Footer() {
             <a
               key={link.label}
               href={link.href}
+              target="_blank"
               className="transition-colors hover:text-primary"
             >
               {link.label}

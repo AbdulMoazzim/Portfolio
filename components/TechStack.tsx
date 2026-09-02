@@ -11,6 +11,15 @@ const STACK = [
   "Supabase",
   "Redis",
   "Python",
+  "Graphql",
+  "Numpy",
+  "Pandas",
+  "Matplotlib",
+  "Seaborn",
+  "RabbitMQ",
+  "Docker",
+  "CI/CD",
+  "ElasticSearch"
 ];
 
 export default function TechStack() {

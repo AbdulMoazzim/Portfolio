@@ -3,7 +3,8 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import TechStack from "@/components/TechStack";
 import Projects from "@/components/Projects";
-import Journey from "@/components/Journey";
+import Recognition from "@/components/Recognition";
+// import Journey from "@/components/Journey";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -16,7 +17,8 @@ export default function Home() {
         <About />
         <TechStack />
         <Projects />
-        <Journey />
+        <Recognition />
+        {/* <Journey /> */}
         <Contact />
       </main>
       <Footer />

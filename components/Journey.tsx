@@ -15,14 +15,6 @@ const MILESTONES: Milestone[] = [
     ],
   },
   {
-    period: "2026",
-    title: "Technical Lead, EmpowerGEN Pakistan",
-    org: "TUM Global Sustainability Challenge",
-    points: [
-      "Led the technical build of a bilingual solar energy platform through to the Global Finals.",
-    ],
-  },
-  {
     period: "2023",
     title: "Full Merit Scholarship",
     org: "NED University of Engineering & Technology",
